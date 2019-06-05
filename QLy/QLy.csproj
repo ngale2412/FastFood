@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7053ADD1-7CEA-44EB-8C2C-FF64089F25FD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QLy</RootNamespace>
+    <AssemblyName>QLy</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BS layer\BLChiTiet.cs" />
+    <Compile Include="BS layer\BLDonHang.cs" />
+    <Compile Include="BS layer\BLKhachHang.cs" />
+    <Compile Include="BS layer\BLKho.cs" />
+    <Compile Include="BS layer\BLNguoiDung.cs" />
+    <Compile Include="BS layer\BLNhanVien.cs" />
+    <Compile Include="BS layer\BLSanPham.cs" />
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB layer\DBMain.cs" />
+    <Compile Include="FormCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCaNhan.Designer.cs">
+      <DependentUpon>FormCaNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChiTiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChiTiet.Designer.cs">
+      <DependentUpon>FormChiTiet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDonHang.Designer.cs">
+      <DependentUpon>FormDonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKhachHang.Designer.cs">
+      <DependentUpon>FormKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKHO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKHO.Designer.cs">
+      <DependentUpon>FormKHO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNV.Designer.cs">
+      <DependentUpon>FormNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSanPham.Designer.cs">
+      <DependentUpon>FormSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThongKe.Designer.cs">
+      <DependentUpon>FormThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormCaNhan.resx">
+      <DependentUpon>FormCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChiTiet.resx">
+      <DependentUpon>FormChiTiet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDonHang.resx">
+      <DependentUpon>FormDonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKhachHang.resx">
+      <DependentUpon>FormKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKHO.resx">
+      <DependentUpon>FormKHO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNV.resx">
+      <DependentUpon>FormNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSanPham.resx">
+      <DependentUpon>FormSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThongKe.resx">
+      <DependentUpon>FormThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Look-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bookmark-add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Load-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text-Edit-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save-as-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-view-list-details-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bakery.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2-cach-lam-banh-mousse-don-gian-ngot-mat-cho-ngay-he-22-jpeg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4-oz-Strawberry-Cheesecake.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banh-macaron-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\macaron.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m-c.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tiramisu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\totoro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\totoro_b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gintama___kanketsu_hen___yorozuya_yo___folder_icon_by_minacsky_saya-d8jsm37.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elizabeth_sadaharu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark-blue-sky-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

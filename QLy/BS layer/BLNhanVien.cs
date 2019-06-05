@@ -24,9 +24,9 @@ namespace QLy.BS_layer
         {
             return db.ExecuteQueryDataSet("select * from NHANVIEN", CommandType.Text);
         }
-        public bool ThemNV(string MaNV, string HoTenDem, string Ten, string GT, string Ngsinh,string DC,string DT, string NgBD, string CV,string Ca, float Luong, ref string err)
+        public bool ThemNV(string MaNV, string HoTen,  string GT, string DC,string DT,string Email,  ref string err)
         {
-            string sqlString = "Insert Into NHANVIEN Values(" + "'" + MaNV + "',N'" + HoTenDem + "',N'" + Ten + "',N'" + GT + "',N'" + Ngsinh + "',N'" + DC + "',N'" + DT + "',N'" + NgBD + "',N'" + CV + "',N'" + Ca + "',N'" + Luong + "')";
+            string sqlString = "Insert Into NHANVIEN Values(" + "'" + MaNV + "',N'" + HoTen + "',N'" + GT + "',N'" + DC + "',N'" + DT + "',N'" + Email + "')";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
         public bool XoaNV(ref string err, string MaNV)
@@ -34,9 +34,9 @@ namespace QLy.BS_layer
             string sqlString = "Delete From NHANVIEN Where MaNV='" + MaNV + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
-        public bool CapNhatNV(string MaNV, string HoTenDem, string Ten, string GT, string Ngsinh, string DC, string DT, string NgBD, string CV, string Ca, float Luong, ref string err)
+        public bool CapNhatNV(string MaNV, string HoTen, string GT,  string DC, string DT,string Email, ref string err)
         {
-            string sqlString = "Update NHANVIEN Set HoTenDem=N'" + HoTenDem + "' ,Ten=N'" + Ten + "' ,GioiTinh=N'" + GT + "' ,NgSinh=N'" + Ngsinh + "' ,DiaChi=N'" + DC + "' ,DienThoai=N'" + DT + "' ,NgayBatdau=N'" + NgBD + "' ,CongViec=N'" + CV + "' ,Ca=N'" + Ca + "' ,Luong=N'" +Luong + "' Where MaNV='" + MaNV + "'";
+            string sqlString = "Update NHANVIEN Set HoTen=N'" + HoTen + "' ,GioiTinh=N'" + GT + "',DiaChi=N'" + DC + "' ,DienThoai=N'" + DT + "' ,Email=N'" + Email + "' Where MaNV='" + MaNV + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
 
@@ -52,10 +52,10 @@ namespace QLy.BS_layer
         }
         public DataSet TimkiemTheoHoTen(string tk)
         {
-            string sql = "select *from NHANVIEN where Ten like N'%" + tk + "%'";
+            string sql = "select *from NHANVIEN where HoTen like N'%" + tk + "%'";
             return db.ExecuteQueryDataSet(sql, CommandType.Text);
         }
-        public DataSet TimkiemTheoDC(string tk)
+       /* public DataSet TimkiemTheoDC(string tk)
         {
             string sql = "select *from NHANVIEN where DiaChi like N'%" + tk + "%'";
             return db.ExecuteQueryDataSet(sql, CommandType.Text);
@@ -69,7 +69,7 @@ namespace QLy.BS_layer
         {
             string sql = "select *from NHANVIEN where Luong='" + tk + "'";
             return db.ExecuteQueryDataSet(sql, CommandType.Text);
-        }
+        }*/
 
     }
 }

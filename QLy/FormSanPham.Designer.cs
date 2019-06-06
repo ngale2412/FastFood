@@ -48,8 +48,15 @@
             this.txtGia = new System.Windows.Forms.TextBox();
             this.txtMasp = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtSoLuong = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtLoaiSP = new System.Windows.Forms.TextBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // rdoGia
@@ -182,13 +189,13 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Myriad Pro", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gold;
-            this.label2.Location = new System.Drawing.Point(21, 219);
+            this.label2.Location = new System.Drawing.Point(32, 203);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(182, 24);
+            this.label2.Size = new System.Drawing.Size(211, 24);
             this.label2.TabIndex = 108;
-            this.label2.Text = "Thông tin loại bánh :";
+            this.label2.Text = "Thông tin Sản phẩm :";
             // 
             // dgvSP
             // 
@@ -204,7 +211,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(38, 380);
+            this.label10.Location = new System.Drawing.Point(39, 318);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(52, 21);
             this.label10.TabIndex = 103;
@@ -215,18 +222,18 @@
             this.lbTen.AutoSize = true;
             this.lbTen.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTen.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbTen.Location = new System.Drawing.Point(38, 331);
+            this.lbTen.Location = new System.Drawing.Point(39, 283);
             this.lbTen.Name = "lbTen";
-            this.lbTen.Size = new System.Drawing.Size(43, 21);
+            this.lbTen.Size = new System.Drawing.Size(84, 21);
             this.lbTen.TabIndex = 102;
-            this.lbTen.Text = "Tên";
+            this.lbTen.Text = "Tên SP :";
             // 
             // lbMaNV
             // 
             this.lbMaNV.AutoSize = true;
             this.lbMaNV.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMaNV.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbMaNV.Location = new System.Drawing.Point(38, 282);
+            this.lbMaNV.Location = new System.Drawing.Point(39, 249);
             this.lbMaNV.Name = "lbMaNV";
             this.lbMaNV.Size = new System.Drawing.Size(78, 21);
             this.lbMaNV.TabIndex = 100;
@@ -235,7 +242,7 @@
             // txtTen
             // 
             this.txtTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTen.Location = new System.Drawing.Point(137, 330);
+            this.txtTen.Location = new System.Drawing.Point(138, 283);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(193, 24);
             this.txtTen.TabIndex = 99;
@@ -243,7 +250,7 @@
             // txtGia
             // 
             this.txtGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtGia.Location = new System.Drawing.Point(137, 377);
+            this.txtGia.Location = new System.Drawing.Point(138, 317);
             this.txtGia.Name = "txtGia";
             this.txtGia.Size = new System.Drawing.Size(193, 24);
             this.txtGia.TabIndex = 98;
@@ -251,7 +258,7 @@
             // txtMasp
             // 
             this.txtMasp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMasp.Location = new System.Drawing.Point(137, 279);
+            this.txtMasp.Location = new System.Drawing.Point(138, 246);
             this.txtMasp.Name = "txtMasp";
             this.txtMasp.Size = new System.Drawing.Size(193, 24);
             this.txtMasp.TabIndex = 97;
@@ -269,12 +276,75 @@
             this.label7.Text = "X";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(39, 352);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 21);
+            this.label1.TabIndex = 142;
+            this.label1.Text = "Số Lượng :";
+            // 
+            // txtSoLuong
+            // 
+            this.txtSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtSoLuong.Location = new System.Drawing.Point(138, 353);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.Size = new System.Drawing.Size(193, 24);
+            this.txtSoLuong.TabIndex = 141;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(39, 424);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 21);
+            this.label4.TabIndex = 143;
+            this.label4.Text = "Hình :";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(138, 423);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(176, 99);
+            this.pictureBox1.TabIndex = 144;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(39, 387);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(91, 21);
+            this.label5.TabIndex = 146;
+            this.label5.Text = "Loại SP :";
+            // 
+            // txtLoaiSP
+            // 
+            this.txtLoaiSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtLoaiSP.Location = new System.Drawing.Point(138, 389);
+            this.txtLoaiSP.Name = "txtLoaiSP";
+            this.txtLoaiSP.Size = new System.Drawing.Size(193, 24);
+            this.txtLoaiSP.TabIndex = 145;
+            // 
             // FormSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(840, 550);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtLoaiSP);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtSoLuong);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.rdoGia);
             this.Controls.Add(this.rdotensp);
@@ -299,6 +369,7 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,5 +397,11 @@
         private System.Windows.Forms.TextBox txtGia;
         private System.Windows.Forms.TextBox txtMasp;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtSoLuong;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtLoaiSP;
     }
 }

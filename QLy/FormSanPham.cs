@@ -40,7 +40,9 @@ namespace QLy
 
                 this.txtMasp.ResetText();
                 this.txtTen.ResetText();
+                this.txtSoLuong.ResetText();
                 this.txtGia.ResetText();
+                this.txtLoaiSP.ResetText();
                 this.txtTimkiem.ResetText();
 
                 this.btnThem.Enabled = true;
@@ -63,8 +65,9 @@ namespace QLy
 
             this.txtMasp.ResetText();
             this.txtTen.ResetText();
+            this.txtSoLuong.ResetText();
             this.txtGia.ResetText();
-
+            this.txtLoaiSP.ResetText();
 
             this.btnLuu.Enabled = true;
             this.btnThem.Enabled = false;
@@ -92,13 +95,14 @@ namespace QLy
         private void btnLuu_Click(object sender, EventArgs e)
         {
             float gia = float.Parse(txtGia.Text);
+            float SL = float.Parse(txtSoLuong.Text);
             if (Them)
             {
                 try
                 {
                     BLSanPham blsp = new BLSanPham();
-                    //blsp.ThemSanPham(this.txtMasp.Text, this.txtTen.Text, gia,convertImagetoByte(), ref err);
-                    blsp.ThemSanPham(this.txtMasp.Text, this.txtTen.Text, gia, ref err);
+                    //blsp.ThemSanPham(this.txtMasp.Text, this.txtTen.Text, gia,SL, ref err);
+                    blsp.ThemSanPham(this.txtMasp.Text, this.txtTen.Text, SL, gia,this.txtLoaiSP.Text, ref err);
                     LoadData();
                     MessageBox.Show("Đã thêm xong!");
                 }
@@ -110,7 +114,7 @@ namespace QLy
             else
             {
                 BLSanPham blsp = new BLSanPham();
-                blsp.CapNhatSanPham(this.txtMasp.Text, this.txtTen.Text, gia, ref err);
+                blsp.CapNhatSanPham(this.txtMasp.Text, this.txtTen.Text, SL,gia,this.txtLoaiSP.Text, ref err);
                 LoadData();
                 MessageBox.Show("Đã sửa xong!");
             }

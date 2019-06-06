@@ -39,12 +39,12 @@ namespace QLy
             }
             if (tabControl1.SelectedIndex == 4)
             {
-                FormKHO f = new FormKHO();
+                FormLoaiSP f = new FormLoaiSP();
                 f.ShowDialog();
             }
             if (tabControl1.SelectedIndex == 5)
             {
-                FormDonHang fdh = new FormDonHang();
+                FormHoaDon fdh = new FormHoaDon();
                 fdh.ShowDialog();
             }
             if(tabControl1.SelectedIndex==6)

@@ -12,36 +12,38 @@ using QLy.BS_layer;
 
 namespace QLy
 {
-    public partial class FormKHO : Form
+    public partial class FormLoaiSP : Form
     {
         DataTable dtK = null;
         bool Them;
         string err;
-        BLKho dbK = new BLKho();
+        BLLoaiSP dbK = new BLLoaiSP();
   
-        string NSX;
-        string HSD;
+       // string NSX;
+       // string HSD;
 
-        public FormKHO()
+        public FormLoaiSP()
         {
             InitializeComponent();
         }
+
+       
         void LoadData()
         {
             try
             {
                 dtK = new DataTable();
                 dtK.Clear();
-                DataSet ds = dbK.LaySanPhamKho();
+                DataSet ds = dbK.LayLoaiSanPham();
                 dtK = ds.Tables[0];
 
-                dgvKho.DataSource = dtK;
+                dgvLoaiSP.DataSource = dtK;
 
-                dgvKho.AutoResizeColumns();
+                dgvLoaiSP.AutoResizeColumns();
 
-                this.cbbMaSP.ResetText();        
-                this.txtTen.ResetText();               
-                this.txtSoluong.ResetText();
+                this.cbbMaLoai.ResetText();        
+                this.txtTenLoai.ResetText();               
+                //this.txtSoluong.ResetText();
 
                 txtTimkiem.ResetText();
 
@@ -50,7 +52,7 @@ namespace QLy
                 this.btnXoa.Enabled = true;
                 this.btnLuu.Enabled = false;
 
-                dgvKho_CellClick(null, null);
+                dgvLoaiSP_CellClick(null, null);
 
             }
             catch (SqlException)
@@ -58,34 +60,40 @@ namespace QLy
                 MessageBox.Show("Không lấy được nội dung trong table NhanVien. Lỗi rồi!!!");
             }
         }
-       
 
-
-        private void dgvKho_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvLoaiSP_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            DateTime dt = DateTime.Now;
-            dateTimePickerHSD.Text = dt.ToString("dd/MM/yyyy");
-            dateTimePickerNXS.Text = dt.ToString("dd/MM/yyyy");
-            
-
-            int r = dgvKho.CurrentCell.RowIndex;
+            int r = dgvLoaiSP.CurrentCell.RowIndex;
             // Chuyển thông tin lên panel
-            this.cbbMaSP.Text = dgvKho.Rows[r].Cells[0].Value.ToString();
-            this.txtTen.Text = dgvKho.Rows[r].Cells[1].Value.ToString();
-            this.dateTimePickerNXS.Text = dgvKho.Rows[r].Cells[2].Value.ToString();         
-            this.dateTimePickerHSD.Text = dgvKho.Rows[r].Cells[3].Value.ToString();
-            this.txtSoluong.Text = dgvKho.Rows[r].Cells[4].Value.ToString();
-
+            this.cbbMaLoai.Text = dgvLoaiSP.Rows[r].Cells[0].Value.ToString();
+            this.txtTenLoai.Text = dgvLoaiSP.Rows[r].Cells[1].Value.ToString();
         }
 
+        //private void dgvKho_CellClick(object sender, DataGridViewCellEventArgs e)
+        //{
+
+        //  // DateTime dt = DateTime.Now;
+        //  //  dateTimePickerHSD.Text = dt.ToString("dd/MM/yyyy");
+        //   // dateTimePickerNXS.Text = dt.ToString("dd/MM/yyyy");
+
+
+        //    int r = dgvLoaiSP.CurrentCell.RowIndex;
+        //    // Chuyển thông tin lên panel
+        //    this.cbbMaLoai.Text = dgvLoaiSP.Rows[r].Cells[0].Value.ToString();
+        //    this.txtTenLoai.Text = dgvLoaiSP.Rows[r].Cells[1].Value.ToString();
+        //   // this.dateTimePickerNXS.Text = dgvKho.Rows[r].Cells[2].Value.ToString();         
+        //  //  this.dateTimePickerHSD.Text = dgvKho.Rows[r].Cells[3].Value.ToString();
+        // //   this.txtSoluong.Text = dgvKho.Rows[r].Cells[4].Value.ToString();
+
+        //}
+
         //
         //
-        private void FormKHO_Load(object sender, EventArgs e)
+        /*private void FormKHO_Load(object sender, EventArgs e)
         {
             LoadData();
             showCbbMaSP();
-        }
+        }*/
         //
         //
 
@@ -96,7 +104,7 @@ namespace QLy
             Them = true;
 
             
-            this.txtTen.ResetText();
+            this.txtTenLoai.ResetText();
             this.txtSoluong.ResetText();
 
 
@@ -104,14 +112,14 @@ namespace QLy
             this.btnThem.Enabled = false;
             this.btnSua.Enabled = false;
             this.btnXoa.Enabled = false;
-            this.cbbMaSP.Focus();
+            this.cbbMaLoai.Focus();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
             Them = false;
 
-            dgvKho_CellClick(null, null);
+            dgvLoaiSP_CellClick(null, null);
 
             this.btnLuu.Enabled = true;
 
@@ -119,16 +127,16 @@ namespace QLy
             this.btnSua.Enabled = false;
             this.btnXoa.Enabled = false;
 
-            this.cbbMaSP.Enabled = false;
-            this.txtTen.Enabled = false;
+            this.cbbMaLoai.Enabled = false;
+            this.txtTenLoai.Enabled = false;
             this.txtSoluong.Focus();
         }
         
         private void btnLuu_Click(object sender, EventArgs e)
         {
 
-            NSX = DateTime.Parse(dateTimePickerNXS.Text).ToString("yyyy-MM-dd");
-            HSD = DateTime.Parse(dateTimePickerHSD.Text).ToString("yyyy-MM-dd");
+           // NSX = DateTime.Parse(dateTimePickerNXS.Text).ToString("yyyy-MM-dd");
+           // HSD = DateTime.Parse(dateTimePickerHSD.Text).ToString("yyyy-MM-dd");
 
             int sl = int.Parse(txtSoluong.Text);
 
@@ -137,8 +145,8 @@ namespace QLy
             {
                 try
                 {
-                    BLKho blK = new BLKho();
-                    blK.ThemSanPhamKho(this.cbbMaSP.Text, this.txtTen.Text, NSX, HSD, sl, ref err);
+                    BLLoaiSP blK = new BLLoaiSP();
+                    blK.ThemLoaiSanPham(this.cbbMaLoai.Text, this.txtTenLoai.Text, ref err);
                     LoadData();
                     MessageBox.Show("Đã thêm xong!");
                 }
@@ -149,8 +157,8 @@ namespace QLy
             }
             else
             {
-                BLKho blK = new BLKho();
-                blK.CapNhatSanPhamKho(this.cbbMaSP.Text, this.txtTen.Text, NSX, HSD, sl, ref err);
+                BLLoaiSP blK = new BLLoaiSP();
+                blK.CapNhatLoaiSanPham(this.cbbMaLoai.Text, this.txtTenLoai.Text, ref err);
                 LoadData();
                 MessageBox.Show("Đã sửa xong!");
             }
@@ -160,8 +168,8 @@ namespace QLy
         {
             try
             {
-                int r = dgvKho.CurrentCell.RowIndex;
-                string strKho = dgvKho.Rows[r].Cells[0].Value.ToString();
+                int r = dgvLoaiSP.CurrentCell.RowIndex;
+                string strKho = dgvLoaiSP.Rows[r].Cells[0].Value.ToString();
 
 
                 DialogResult traloi;
@@ -169,7 +177,7 @@ namespace QLy
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (traloi == DialogResult.Yes)
                 {
-                    dbK.XoaSanPhamKho(ref err, strKho);
+                    dbK.XoaLoaiSanPham(ref err, strKho);
                     LoadData();
                     MessageBox.Show("Đã xóa xong!");
                 }
@@ -195,7 +203,7 @@ namespace QLy
             LoadData();
         }
 
-        private void btnTimkiem_Click(object sender, EventArgs e)
+       /* private void btnTimkiem_Click(object sender, EventArgs e)
         {
             DataSet ds;
 
@@ -224,7 +232,7 @@ namespace QLy
             dgvKho.AutoResizeColumns();
         }
 
-
+    */
         //
         //
         #region load vào combobox và đổ ra textbox
@@ -236,9 +244,9 @@ namespace QLy
             DataSet ds = bl.LaySanPham();
             dtK = ds.Tables[0];
 
-            cbbMaSP.DataSource = dtK;
-            cbbMaSP.DisplayMember = BLSanPham.masp;
-            cbbMaSP.ValueMember = BLSanPham.masp;
+            cbbMaLoai.DataSource = dtK;
+            cbbMaLoai.DisplayMember = BLSanPham.masp;
+            cbbMaLoai.ValueMember = BLSanPham.masp;
 
         }
         private void cbbMaSP_SelectedIndexChanged(object sender, EventArgs e)
@@ -247,11 +255,11 @@ namespace QLy
             dtK = new DataTable();
             dtK.Clear();
 
-            DataSet ds = blsp.ktra(cbbMaSP.Text); ;
+            DataSet ds = blsp.ktra(cbbMaLoai.Text); ;
             dtK = ds.Tables[0];
             foreach (DataRow a in dtK.Rows)
             {
-                txtTen.Text = a[BLSanPham.ten].ToString();
+                txtTenLoai.Text = a[BLSanPham.ten].ToString();
             }
 
             
@@ -260,6 +268,29 @@ namespace QLy
         private void label7_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void rdonxs_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormLoaiSP_Load(object sender, EventArgs e)
+        {
+            LoadData();
+            showCbbMaSP();
+        }
+
+       
+
+        private void btnTimkiem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvLoaiSP_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         #endregion

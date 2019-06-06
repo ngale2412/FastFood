@@ -13,7 +13,7 @@ using QLy.BS_layer;
 
 namespace QLy
 {
-    public partial class FormDonHang : Form
+    public partial class FormHoaDon : Form
     {
         DataTable dtK = null;
         bool Them;
@@ -22,7 +22,7 @@ namespace QLy
 
         string NgLap;
 
-        public FormDonHang()
+        public FormHoaDon()
         {
             InitializeComponent();
             txtTong.Text = "";

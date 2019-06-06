@@ -1,6 +1,6 @@
 ﻿namespace QLy
 {
-    partial class FormKHO
+    partial class FormLoaiSP
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvKho = new System.Windows.Forms.DataGridView();
-            this.dateTimePickerNXS = new System.Windows.Forms.DateTimePicker();
+            this.dgvLoaiSP = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
-            this.lbTen = new System.Windows.Forms.Label();
-            this.lbNgSinh = new System.Windows.Forms.Label();
-            this.lbMaNV = new System.Windows.Forms.Label();
-            this.txtTen = new System.Windows.Forms.TextBox();
+            this.lbTenLoai = new System.Windows.Forms.Label();
+            this.lbMaLoai = new System.Windows.Forms.Label();
+            this.txtTenLoai = new System.Windows.Forms.TextBox();
             this.txtSoluong = new System.Windows.Forms.TextBox();
             this.dateTimePickerHSD = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,36 +43,25 @@
             this.btnLuu = new System.Windows.Forms.ToolStripButton();
             this.btnXoa = new System.Windows.Forms.ToolStripButton();
             this.btnCapNhat = new System.Windows.Forms.ToolStripButton();
-            this.rdonxs = new System.Windows.Forms.RadioButton();
-            this.rdohsd = new System.Windows.Forms.RadioButton();
-            this.rdotensp = new System.Windows.Forms.RadioButton();
+            this.rdoMaLoaiSP = new System.Windows.Forms.RadioButton();
+            this.rdoTenLoaisp = new System.Windows.Forms.RadioButton();
             this.txtTimkiem = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnTimkiem = new System.Windows.Forms.Button();
-            this.cbbMaSP = new System.Windows.Forms.ComboBox();
+            this.cbbMaLoai = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKho)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiSP)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgvKho
+            // dgvLoaiSP
             // 
-            this.dgvKho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKho.Location = new System.Drawing.Point(354, 114);
-            this.dgvKho.Name = "dgvKho";
-            this.dgvKho.Size = new System.Drawing.Size(442, 400);
-            this.dgvKho.TabIndex = 82;
-            this.dgvKho.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKho_CellClick);
-            // 
-            // dateTimePickerNXS
-            // 
-            this.dateTimePickerNXS.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePickerNXS.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dateTimePickerNXS.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerNXS.Location = new System.Drawing.Point(142, 366);
-            this.dateTimePickerNXS.Name = "dateTimePickerNXS";
-            this.dateTimePickerNXS.Size = new System.Drawing.Size(193, 24);
-            this.dateTimePickerNXS.TabIndex = 80;
+            this.dgvLoaiSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLoaiSP.Location = new System.Drawing.Point(354, 114);
+            this.dgvLoaiSP.Name = "dgvLoaiSP";
+            this.dgvLoaiSP.Size = new System.Drawing.Size(442, 400);
+            this.dgvLoaiSP.TabIndex = 82;
+            this.dgvLoaiSP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLoaiSP_CellClick);
             // 
             // label10
             // 
@@ -87,46 +74,35 @@
             this.label10.TabIndex = 75;
             this.label10.Text = "Số lượng :";
             // 
-            // lbTen
+            // lbTenLoai
             // 
-            this.lbTen.AutoSize = true;
-            this.lbTen.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTen.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbTen.Location = new System.Drawing.Point(43, 319);
-            this.lbTen.Name = "lbTen";
-            this.lbTen.Size = new System.Drawing.Size(43, 21);
-            this.lbTen.TabIndex = 74;
-            this.lbTen.Text = "Tên";
+            this.lbTenLoai.AutoSize = true;
+            this.lbTenLoai.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenLoai.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbTenLoai.Location = new System.Drawing.Point(43, 319);
+            this.lbTenLoai.Name = "lbTenLoai";
+            this.lbTenLoai.Size = new System.Drawing.Size(89, 21);
+            this.lbTenLoai.TabIndex = 74;
+            this.lbTenLoai.Text = "Tên Loại";
             // 
-            // lbNgSinh
+            // lbMaLoai
             // 
-            this.lbNgSinh.AutoSize = true;
-            this.lbNgSinh.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNgSinh.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbNgSinh.Location = new System.Drawing.Point(43, 366);
-            this.lbNgSinh.Name = "lbNgSinh";
-            this.lbNgSinh.Size = new System.Drawing.Size(61, 21);
-            this.lbNgSinh.TabIndex = 72;
-            this.lbNgSinh.Text = "NXS :";
+            this.lbMaLoai.AutoSize = true;
+            this.lbMaLoai.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaLoai.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbMaLoai.Location = new System.Drawing.Point(43, 270);
+            this.lbMaLoai.Name = "lbMaLoai";
+            this.lbMaLoai.Size = new System.Drawing.Size(94, 21);
+            this.lbMaLoai.TabIndex = 67;
+            this.lbMaLoai.Text = "Mã Loại :";
             // 
-            // lbMaNV
+            // txtTenLoai
             // 
-            this.lbMaNV.AutoSize = true;
-            this.lbMaNV.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMaNV.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbMaNV.Location = new System.Drawing.Point(43, 270);
-            this.lbMaNV.Name = "lbMaNV";
-            this.lbMaNV.Size = new System.Drawing.Size(78, 21);
-            this.lbMaNV.TabIndex = 67;
-            this.lbMaNV.Text = "Mã SP :";
-            // 
-            // txtTen
-            // 
-            this.txtTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTen.Location = new System.Drawing.Point(142, 318);
-            this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(193, 24);
-            this.txtTen.TabIndex = 64;
+            this.txtTenLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtTenLoai.Location = new System.Drawing.Point(142, 318);
+            this.txtTenLoai.Name = "txtTenLoai";
+            this.txtTenLoai.Size = new System.Drawing.Size(193, 24);
+            this.txtTenLoai.TabIndex = 64;
             // 
             // txtSoluong
             // 
@@ -160,13 +136,13 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Myriad Pro", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gold;
             this.label2.Location = new System.Drawing.Point(26, 207);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(206, 24);
+            this.label2.Size = new System.Drawing.Size(251, 24);
             this.label2.TabIndex = 89;
-            this.label2.Text = "Thông tin phòng bánh :";
+            this.label2.Text = "Thông tin Loại Sản Phẩm:";
             // 
             // toolStrip1
             // 
@@ -191,7 +167,7 @@
             this.btnThem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnThem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(93, 44);
+            this.btnThem.Size = new System.Drawing.Size(93, 55);
             this.btnThem.Text = " Thêm ";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -202,7 +178,7 @@
             this.btnSua.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnSua.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(92, 44);
+            this.btnSua.Size = new System.Drawing.Size(92, 55);
             this.btnSua.Text = "  Sửa   ";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
@@ -213,7 +189,7 @@
             this.btnLuu.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnLuu.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(92, 44);
+            this.btnLuu.Size = new System.Drawing.Size(92, 55);
             this.btnLuu.Text = "  Lưu   ";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
@@ -224,7 +200,7 @@
             this.btnXoa.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnXoa.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(92, 44);
+            this.btnXoa.Size = new System.Drawing.Size(92, 55);
             this.btnXoa.Text = "  Xóa   ";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -235,48 +211,36 @@
             this.btnCapNhat.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnCapNhat.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(111, 44);
+            this.btnCapNhat.Size = new System.Drawing.Size(111, 55);
             this.btnCapNhat.Text = "Cập Nhật";
             this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
-            // rdonxs
+            // rdoMaLoaiSP
             // 
-            this.rdonxs.AutoSize = true;
-            this.rdonxs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rdonxs.ForeColor = System.Drawing.Color.LawnGreen;
-            this.rdonxs.Location = new System.Drawing.Point(152, 142);
-            this.rdonxs.Name = "rdonxs";
-            this.rdonxs.Size = new System.Drawing.Size(56, 20);
-            this.rdonxs.TabIndex = 96;
-            this.rdonxs.TabStop = true;
-            this.rdonxs.Text = "NXS";
-            this.rdonxs.UseVisualStyleBackColor = true;
+            this.rdoMaLoaiSP.AutoSize = true;
+            this.rdoMaLoaiSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rdoMaLoaiSP.ForeColor = System.Drawing.Color.LawnGreen;
+            this.rdoMaLoaiSP.Location = new System.Drawing.Point(188, 142);
+            this.rdoMaLoaiSP.Name = "rdoMaLoaiSP";
+            this.rdoMaLoaiSP.Size = new System.Drawing.Size(56, 20);
+            this.rdoMaLoaiSP.TabIndex = 96;
+            this.rdoMaLoaiSP.TabStop = true;
+            this.rdoMaLoaiSP.Text = "NXS";
+            this.rdoMaLoaiSP.UseVisualStyleBackColor = true;
+            this.rdoMaLoaiSP.CheckedChanged += new System.EventHandler(this.rdonxs_CheckedChanged);
             // 
-            // rdohsd
+            // rdoTenLoaisp
             // 
-            this.rdohsd.AutoSize = true;
-            this.rdohsd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rdohsd.ForeColor = System.Drawing.Color.LawnGreen;
-            this.rdohsd.Location = new System.Drawing.Point(243, 142);
-            this.rdohsd.Name = "rdohsd";
-            this.rdohsd.Size = new System.Drawing.Size(58, 20);
-            this.rdohsd.TabIndex = 95;
-            this.rdohsd.TabStop = true;
-            this.rdohsd.Text = "HSD";
-            this.rdohsd.UseVisualStyleBackColor = true;
-            // 
-            // rdotensp
-            // 
-            this.rdotensp.AutoSize = true;
-            this.rdotensp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rdotensp.ForeColor = System.Drawing.Color.LawnGreen;
-            this.rdotensp.Location = new System.Drawing.Point(61, 142);
-            this.rdotensp.Name = "rdotensp";
-            this.rdotensp.Size = new System.Drawing.Size(77, 20);
-            this.rdotensp.TabIndex = 94;
-            this.rdotensp.TabStop = true;
-            this.rdotensp.Text = "Tên SP";
-            this.rdotensp.UseVisualStyleBackColor = true;
+            this.rdoTenLoaisp.AutoSize = true;
+            this.rdoTenLoaisp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rdoTenLoaisp.ForeColor = System.Drawing.Color.LawnGreen;
+            this.rdoTenLoaisp.Location = new System.Drawing.Point(61, 142);
+            this.rdoTenLoaisp.Name = "rdoTenLoaisp";
+            this.rdoTenLoaisp.Size = new System.Drawing.Size(77, 20);
+            this.rdoTenLoaisp.TabIndex = 94;
+            this.rdoTenLoaisp.TabStop = true;
+            this.rdoTenLoaisp.Text = "Tên SP";
+            this.rdoTenLoaisp.UseVisualStyleBackColor = true;
             // 
             // txtTimkiem
             // 
@@ -308,15 +272,15 @@
             this.btnTimkiem.UseVisualStyleBackColor = false;
             this.btnTimkiem.Click += new System.EventHandler(this.btnTimkiem_Click);
             // 
-            // cbbMaSP
+            // cbbMaLoai
             // 
-            this.cbbMaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbbMaSP.FormattingEnabled = true;
-            this.cbbMaSP.Location = new System.Drawing.Point(142, 270);
-            this.cbbMaSP.Name = "cbbMaSP";
-            this.cbbMaSP.Size = new System.Drawing.Size(193, 24);
-            this.cbbMaSP.TabIndex = 97;
-            this.cbbMaSP.SelectedIndexChanged += new System.EventHandler(this.cbbMaSP_SelectedIndexChanged);
+            this.cbbMaLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbbMaLoai.FormattingEnabled = true;
+            this.cbbMaLoai.Location = new System.Drawing.Point(142, 270);
+            this.cbbMaLoai.Name = "cbbMaLoai";
+            this.cbbMaLoai.Size = new System.Drawing.Size(193, 24);
+            this.cbbMaLoai.TabIndex = 97;
+            this.cbbMaLoai.SelectedIndexChanged += new System.EventHandler(this.cbbMaSP_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -331,17 +295,16 @@
             this.label7.Text = "X";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // FormKHO
+            // FormLoaiSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(840, 550);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.cbbMaSP);
-            this.Controls.Add(this.rdonxs);
-            this.Controls.Add(this.rdohsd);
-            this.Controls.Add(this.rdotensp);
+            this.Controls.Add(this.cbbMaLoai);
+            this.Controls.Add(this.rdoMaLoaiSP);
+            this.Controls.Add(this.rdoTenLoaisp);
             this.Controls.Add(this.txtTimkiem);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnTimkiem);
@@ -349,21 +312,19 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dateTimePickerHSD);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvKho);
-            this.Controls.Add(this.dateTimePickerNXS);
+            this.Controls.Add(this.dgvLoaiSP);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.lbTen);
-            this.Controls.Add(this.lbNgSinh);
-            this.Controls.Add(this.lbMaNV);
-            this.Controls.Add(this.txtTen);
+            this.Controls.Add(this.lbTenLoai);
+            this.Controls.Add(this.lbMaLoai);
+            this.Controls.Add(this.txtTenLoai);
             this.Controls.Add(this.txtSoluong);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormKHO";
+            this.Name = "FormLoaiSP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormKHO";
-            this.Load += new System.EventHandler(this.FormKHO_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKho)).EndInit();
+            this.Load += new System.EventHandler(this.FormLoaiSP_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiSP)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -372,13 +333,11 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dgvKho;
-        private System.Windows.Forms.DateTimePicker dateTimePickerNXS;
+        private System.Windows.Forms.DataGridView dgvLoaiSP;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lbTen;
-        private System.Windows.Forms.Label lbNgSinh;
-        private System.Windows.Forms.Label lbMaNV;
-        private System.Windows.Forms.TextBox txtTen;
+        private System.Windows.Forms.Label lbTenLoai;
+        private System.Windows.Forms.Label lbMaLoai;
+        private System.Windows.Forms.TextBox txtTenLoai;
         private System.Windows.Forms.TextBox txtSoluong;
         private System.Windows.Forms.DateTimePicker dateTimePickerHSD;
         private System.Windows.Forms.Label label1;
@@ -389,13 +348,12 @@
         private System.Windows.Forms.ToolStripButton btnLuu;
         private System.Windows.Forms.ToolStripButton btnXoa;
         private System.Windows.Forms.ToolStripButton btnCapNhat;
-        private System.Windows.Forms.RadioButton rdonxs;
-        private System.Windows.Forms.RadioButton rdohsd;
-        private System.Windows.Forms.RadioButton rdotensp;
+        private System.Windows.Forms.RadioButton rdoMaLoaiSP;
+        private System.Windows.Forms.RadioButton rdoTenLoaisp;
         private System.Windows.Forms.TextBox txtTimkiem;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnTimkiem;
-        private System.Windows.Forms.ComboBox cbbMaSP;
+        private System.Windows.Forms.ComboBox cbbMaLoai;
         private System.Windows.Forms.Label label7;
     }
 }

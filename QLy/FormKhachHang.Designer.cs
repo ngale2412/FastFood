@@ -53,6 +53,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnTimkiem = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKH)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -62,7 +64,7 @@
             this.rdoNu.AutoSize = true;
             this.rdoNu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rdoNu.ForeColor = System.Drawing.Color.OrangeRed;
-            this.rdoNu.Location = new System.Drawing.Point(630, 214);
+            this.rdoNu.Location = new System.Drawing.Point(630, 248);
             this.rdoNu.Name = "rdoNu";
             this.rdoNu.Size = new System.Drawing.Size(45, 22);
             this.rdoNu.TabIndex = 33;
@@ -75,7 +77,7 @@
             this.rdoNam.AutoSize = true;
             this.rdoNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rdoNam.ForeColor = System.Drawing.Color.OrangeRed;
-            this.rdoNam.Location = new System.Drawing.Point(549, 214);
+            this.rdoNam.Location = new System.Drawing.Point(549, 248);
             this.rdoNam.Name = "rdoNam";
             this.rdoNam.Size = new System.Drawing.Size(58, 22);
             this.rdoNam.TabIndex = 32;
@@ -173,7 +175,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(453, 216);
+            this.label5.Location = new System.Drawing.Point(453, 250);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 20);
             this.label5.TabIndex = 38;
@@ -203,7 +205,7 @@
             this.btnThem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnThem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(93, 44);
+            this.btnThem.Size = new System.Drawing.Size(93, 52);
             this.btnThem.Text = " Thêm ";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -215,7 +217,7 @@
             this.btnSua.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnSua.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(92, 44);
+            this.btnSua.Size = new System.Drawing.Size(92, 52);
             this.btnSua.Text = "  Sửa   ";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
@@ -227,7 +229,7 @@
             this.btnLuu.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnLuu.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(92, 44);
+            this.btnLuu.Size = new System.Drawing.Size(92, 52);
             this.btnLuu.Text = "  Lưu   ";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
@@ -239,7 +241,7 @@
             this.btnXoa.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnXoa.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(92, 44);
+            this.btnXoa.Size = new System.Drawing.Size(92, 52);
             this.btnXoa.Text = "  Xóa   ";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
@@ -251,7 +253,7 @@
             this.btnCapNhat.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnCapNhat.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(111, 44);
+            this.btnCapNhat.Size = new System.Drawing.Size(111, 52);
             this.btnCapNhat.Text = "Cập Nhật";
             this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
@@ -337,12 +339,33 @@
             this.label7.Text = "X";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label8.Location = new System.Drawing.Point(453, 217);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(63, 20);
+            this.label8.TabIndex = 139;
+            this.label8.Text = "Email :";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtEmail.Location = new System.Drawing.Point(537, 214);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(192, 24);
+            this.txtEmail.TabIndex = 138;
+            // 
             // FormKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(840, 550);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.rdoTen);
             this.Controls.Add(this.rdoGT);
@@ -405,5 +428,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnTimkiem;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtEmail;
     }
 }

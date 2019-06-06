@@ -2,16 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 
 using System.Data;
+using System.Data.SqlClient;
+
+
 using QLy.DB_layer;
 
 namespace QLy.BS_layer
 {
     class BLDonHang
     {
-        public static string madh = "MaDH";
+        public static string madh = "MaHD";
 
         DBMain db = null;
         public BLDonHang()
@@ -21,23 +25,23 @@ namespace QLy.BS_layer
         }
         public DataSet LayDonHang()
         {
-            return db.ExecuteQueryDataSet("select * from DONHANG", CommandType.Text);
+            return db.ExecuteQueryDataSet("select * from HOADON", CommandType.Text);
         }
-        public bool ThemDonHang(string MaDH, string MaKH, string MaNV, string NgLap, float tong, ref string err)
+        public bool ThemDonHang(string MaDH, string MaKH, string MaNV,  float tong, string NgLap, ref string err)
         {
-            string sqlString = "Insert Into DONHANG Values(" + "'" + MaDH + "',N'" + MaKH + "',N'" + MaNV + "',N'" + NgLap + "',N'" + tong + "')";
+            string sqlString = "Insert Into HOADON Values(" + "'" + MaDH + "',N'" + MaKH + "',N'" + MaNV + "',N'" + tong + "',N'" + NgLap + "')";
 
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
 
         }
         public bool XoaDonHang(ref string err, string MaDH)
         {
-            string sqlString = "Delete From DONHANG Where MaDH='" + MaDH + "'";
+            string sqlString = "Delete From HOADON Where MaHD='" + MaDH + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
-        public bool CapNhatDonHang(string MaDH, string MaKH, string MaNV, string NgLap, float tong, ref string err)
+        public bool CapNhatDonHang(string MaDH, string MaKH, string MaNV, float tong, string NgLap,  ref string err)
         {
-            string sqlString = "Update DONHANG Set MaKH=N'" + MaKH + "' ,MaNV=N'" + MaNV + "' ,NgayLap=N'" + NgLap + "' ,TongTien=N'" + tong + "' Where MaDH='" + MaDH + "'";
+            string sqlString = "Update HOADON Set MaKH=N'" + MaKH + "' ,MaNV=N'" + MaNV + "',TongTien=N'" + tong + "' ,NgayLap=N'" + NgLap + "'  Where MaHD='" + MaDH + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
 
@@ -45,19 +49,19 @@ namespace QLy.BS_layer
         //tìm kiếm
         public DataSet TimkiemTheoMaDH(string tk)
         {
-            string sql = "select *from DONHANG where MaDH like N'%" + tk + "%'";
+            string sql = "select *from HOADON where MaHD like N'%" + tk + "%'";
             return db.ExecuteQueryDataSet(sql, CommandType.Text);
         }
 
         public DataSet TimkiemTheoMaKH(string tk)
         {
-            string sql = "select *from DONHANG where MaKH like N'%" + tk + "%'";
+            string sql = "select *from HOADON where MaKH like N'%" + tk + "%'";
             return db.ExecuteQueryDataSet(sql, CommandType.Text);
         }
 
         public DataSet TimkiemTheoMaNV(string tk)
         {
-            string sql = "select *from DONHANG where MaNV like N'%" + tk + "%'";
+            string sql = "select *from HOADON where MaNV like N'%" + tk + "%'";
             return db.ExecuteQueryDataSet(sql, CommandType.Text);
         }
 

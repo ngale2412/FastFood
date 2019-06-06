@@ -191,8 +191,12 @@ namespace QLy
             dgvSP.Rows[r].Cells[0].Value.ToString();
             this.txtTen.Text =
             dgvSP.Rows[r].Cells[1].Value.ToString();
-            this.txtGia.Text =
+            this.txtSoLuong.Text =
             dgvSP.Rows[r].Cells[2].Value.ToString();
+            this.txtGia.Text =
+           dgvSP.Rows[r].Cells[3].Value.ToString();
+            this.txtLoaiSP.Text =
+           dgvSP.Rows[r].Cells[5].Value.ToString();
         }
 
         private void label7_Click(object sender, EventArgs e)

@@ -96,8 +96,9 @@ namespace QLy
             this.txtMaDH.Text = dgvDonHang.Rows[r].Cells[0].Value.ToString();
             this.cbbMaKH.Text = dgvDonHang.Rows[r].Cells[1].Value.ToString();
             this.cbbMaNV.Text = dgvDonHang.Rows[r].Cells[2].Value.ToString();
-            this.dateTimePickerNGLAP.Text = dgvDonHang.Rows[r].Cells[3].Value.ToString();
-            this.txtTong.Text = dgvDonHang.Rows[r].Cells[4].Value.ToString();
+            this.txtTong.Text = dgvDonHang.Rows[r].Cells[3].Value.ToString();
+            this.dateTimePickerNGLAP.Text = dgvDonHang.Rows[r].Cells[4].Value.ToString();
+            
         }
         
         private void FormDonHang_Load(object sender, EventArgs e)
@@ -194,7 +195,7 @@ namespace QLy
                 try
                 {
                     BLDonHang bldh = new BLDonHang();
-                    bldh.ThemDonHang(this.txtMaDH.Text, this.cbbMaKH.Text, this.cbbMaNV.Text, NgLap, tien, ref err);                   
+                    bldh.ThemDonHang(this.txtMaDH.Text, this.cbbMaKH.Text, this.cbbMaNV.Text, tien, NgLap, ref err);
                     LoadData();
                     MessageBox.Show("Đã thêm xong!");
                 }
@@ -206,7 +207,7 @@ namespace QLy
             else
             {
                 BLDonHang bldh = new BLDonHang();
-                bldh.CapNhatDonHang(this.txtMaDH.Text, this.cbbMaKH.Text, this.cbbMaNV.Text, NgLap, tien, ref err);
+                bldh.CapNhatDonHang(this.txtMaDH.Text, this.cbbMaKH.Text, this.cbbMaNV.Text, tien, NgLap, ref err);
                 LoadData();
                 MessageBox.Show("Đã sửa xong!");
             }
@@ -308,7 +309,7 @@ namespace QLy
                 {
                     txtTong.Text = a[BLChiTiet.money].ToString();
                     g = float.Parse(txtTong.Text);
-                    blDH.CapNhatDonHang(this.txtMaDH.Text, this.cbbMaKH.Text, this.cbbMaNV.Text, NgLap, g, ref err);
+                    blDH.CapNhatDonHang(this.txtMaDH.Text, this.cbbMaKH.Text, this.cbbMaNV.Text, g, NgLap, ref err);
                     LoadData();
                 }
 

@@ -76,7 +76,7 @@ namespace QLy
 
                     dtCaNhan = new DataTable();
                     dtCaNhan.Clear();
-                    DataSet ds = blnd.layCaNhan(txtShowUser.Text, txtShowPass.Text, ref err);
+                    DataSet ds = blnd.layACCOUNT(txtShowUser.Text, txtShowPass.Text, ref err);
                     dtCaNhan = ds.Tables[0];
                     dgvCaNhan.DataSource = dtCaNhan;
                     dgvCaNhan.AutoResizeColumns();

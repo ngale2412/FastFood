@@ -10,7 +10,7 @@ namespace QLy.DB_layer
 {
     class DBMain
     {
-        string ConnStr = "Data Source=(local);Initial Catalog=QuanlyTiemBanh;Integrated Security=True";
+        string ConnStr = "Data Source=DESKTOP-SLNDDHO;Initial Catalog=QuanLyFastFood;Integrated Security=True";
         SqlConnection conn = null;
         SqlCommand comm = null;
         SqlDataAdapter da = null;

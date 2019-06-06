@@ -47,11 +47,11 @@ namespace QLy
                 FormHoaDon fdh = new FormHoaDon();
                 fdh.ShowDialog();
             }
-            if(tabControl1.SelectedIndex==6)
-            {
-                FormThongKe tk = new FormThongKe();
-                tk.ShowDialog();
-            }
+            //if(tabControl1.SelectedIndex==6)
+            //{
+            //    FormThongKe tk = new FormThongKe();
+            //    tk.ShowDialog();
+            //}
         }
 
         private void tabPageKho_Click(object sender, EventArgs e)
@@ -77,6 +77,11 @@ namespace QLy
         {
             FormCaNhan f = new FormCaNhan();
             f.ShowDialog();
+        }
+
+        private void tabPageSP_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

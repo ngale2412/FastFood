@@ -40,6 +40,8 @@ namespace QLy
 
                 this.txtMasp.ResetText();
                 this.txtTen.ResetText();
+                
+               
                 this.txtSoLuong.ResetText();
                 this.txtGia.ResetText();
                 this.txtLoaiSP.ResetText();

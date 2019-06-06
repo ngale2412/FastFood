@@ -211,7 +211,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(39, 318);
+            this.label10.Location = new System.Drawing.Point(39, 359);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(52, 21);
             this.label10.TabIndex = 103;
@@ -250,7 +250,7 @@
             // txtGia
             // 
             this.txtGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtGia.Location = new System.Drawing.Point(138, 317);
+            this.txtGia.Location = new System.Drawing.Point(138, 359);
             this.txtGia.Name = "txtGia";
             this.txtGia.Size = new System.Drawing.Size(193, 24);
             this.txtGia.TabIndex = 98;
@@ -281,7 +281,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(39, 352);
+            this.label1.Location = new System.Drawing.Point(39, 323);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 21);
             this.label1.TabIndex = 142;
@@ -290,7 +290,7 @@
             // txtSoLuong
             // 
             this.txtSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtSoLuong.Location = new System.Drawing.Point(138, 353);
+            this.txtSoLuong.Location = new System.Drawing.Point(138, 320);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(193, 24);
             this.txtSoLuong.TabIndex = 141;
@@ -319,7 +319,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(39, 387);
+            this.label5.Location = new System.Drawing.Point(39, 393);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 21);
             this.label5.TabIndex = 146;
@@ -328,7 +328,7 @@
             // txtLoaiSP
             // 
             this.txtLoaiSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtLoaiSP.Location = new System.Drawing.Point(138, 389);
+            this.txtLoaiSP.Location = new System.Drawing.Point(138, 393);
             this.txtLoaiSP.Name = "txtLoaiSP";
             this.txtLoaiSP.Size = new System.Drawing.Size(193, 24);
             this.txtLoaiSP.TabIndex = 145;

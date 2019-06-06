@@ -45,13 +45,13 @@
             this.btnCapNhat = new System.Windows.Forms.ToolStripButton();
             this.cbbMaDH = new System.Windows.Forms.ComboBox();
             this.cbbMaSP = new System.Windows.Forms.ComboBox();
-            this.rdoMakh = new System.Windows.Forms.RadioButton();
             this.rdoMasp = new System.Windows.Forms.RadioButton();
             this.rdoMaDH = new System.Windows.Forms.RadioButton();
             this.txtTimkiem = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.rdoMakh = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCT)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -227,7 +227,7 @@
             this.cbbMaDH.Name = "cbbMaDH";
             this.cbbMaDH.Size = new System.Drawing.Size(193, 26);
             this.cbbMaDH.TabIndex = 127;
-            this.cbbMaDH.SelectedIndexChanged += new System.EventHandler(this.cbbMaDH_SelectedIndexChanged);
+           // this.cbbMaDH.SelectedIndexChanged += new System.EventHandler(this.cbbMaDH_SelectedIndexChanged);
             // 
             // cbbMaSP
             // 
@@ -238,19 +238,6 @@
             this.cbbMaSP.Size = new System.Drawing.Size(193, 26);
             this.cbbMaSP.TabIndex = 128;
             this.cbbMaSP.SelectedIndexChanged += new System.EventHandler(this.cbbMaSP_SelectedIndexChanged);
-            // 
-            // rdoMakh
-            // 
-            this.rdoMakh.AutoSize = true;
-            this.rdoMakh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rdoMakh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.rdoMakh.Location = new System.Drawing.Point(166, 161);
-            this.rdoMakh.Name = "rdoMakh";
-            this.rdoMakh.Size = new System.Drawing.Size(71, 20);
-            this.rdoMakh.TabIndex = 134;
-            this.rdoMakh.TabStop = true;
-            this.rdoMakh.Text = "Mã KH";
-            this.rdoMakh.UseVisualStyleBackColor = true;
             // 
             // rdoMasp
             // 
@@ -321,6 +308,19 @@
             this.label4.Text = "X";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
+            // rdoMakh
+            // 
+            this.rdoMakh.AutoSize = true;
+            this.rdoMakh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rdoMakh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.rdoMakh.Location = new System.Drawing.Point(166, 161);
+            this.rdoMakh.Name = "rdoMakh";
+            this.rdoMakh.Size = new System.Drawing.Size(71, 20);
+            this.rdoMakh.TabIndex = 134;
+            this.rdoMakh.TabStop = true;
+            this.rdoMakh.Text = "Mã KH";
+            this.rdoMakh.UseVisualStyleBackColor = true;
+            // 
             // FormChiTiet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,12 +379,12 @@
         private System.Windows.Forms.ToolStripButton btnCapNhat;
         private System.Windows.Forms.ComboBox cbbMaDH;
         private System.Windows.Forms.ComboBox cbbMaSP;
-        private System.Windows.Forms.RadioButton rdoMakh;
         private System.Windows.Forms.RadioButton rdoMasp;
         private System.Windows.Forms.RadioButton rdoMaDH;
         private System.Windows.Forms.TextBox txtTimkiem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RadioButton rdoMakh;
     }
 }

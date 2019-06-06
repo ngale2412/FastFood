@@ -129,12 +129,6 @@
     <Compile Include="FormSanPham.Designer.cs">
       <DependentUpon>FormSanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormThongKe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormThongKe.Designer.cs">
-      <DependentUpon>FormThongKe.cs</DependentUpon>
-    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,9 +137,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormCaNhan.resx">
-      <DependentUpon>FormCaNhan.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormChiTiet.resx">
       <DependentUpon>FormChiTiet.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,9 +157,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormSanPham.resx">
       <DependentUpon>FormSanPham.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormThongKe.resx">
-      <DependentUpon>FormThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

@@ -43,10 +43,12 @@ namespace QLy
                 dgvCT.AutoResizeColumns();
 
                 this.cbbMaDH.ResetText();
-                this.txtMaKH.ResetText();
+               // this.txtMaKH.ResetText();
                 this.cbbMaSP.ResetText();
                 this.txtSL.ResetText();
                 this.txtGia.ResetText();
+                
+              
                 this.txtTien.ResetText();
 
                 this.btnThem.Enabled = true;
@@ -71,7 +73,7 @@ namespace QLy
             Them = true;
 
             this.cbbMaDH.ResetText();
-            this.txtMaKH.ResetText();
+           // this.txtMaKH.ResetText();
             this.cbbMaSP.ResetText();
             this.txtSL.ResetText();
             this.txtGia.ResetText();
@@ -101,7 +103,7 @@ namespace QLy
             this.btnXoa.Enabled = false;
 
             this.cbbMaDH.Enabled = false;
-            this.txtMaKH.Enabled = false;
+           // this.txtMaKH.Enabled = false;
             this.cbbMaSP.ResetText();
             this.txtSL.ResetText();
             this.txtGia.ResetText();
@@ -134,7 +136,7 @@ namespace QLy
                 try
                 {
                     BLChiTiet bldh = new BLChiTiet();
-                    bldh.ThemChitiet(this.cbbMaDH.Text, this.cbbMaSP.Text, this.txtMaKH.Text, sl, gia, t, ref err);
+                    bldh.ThemChitiet(this.cbbMaDH.Text, this.cbbMaSP.Text, sl, gia, t, ref err);
                     LoadData();
                     MessageBox.Show("Đã thêm xong!");
                 }
@@ -146,7 +148,7 @@ namespace QLy
             else
             {
                 BLChiTiet bldh = new BLChiTiet();
-                bldh.CapNhatChitiet(this.cbbMaDH.Text, this.cbbMaSP.Text, this.txtMaKH.Text, sl, gia, t, ref err);
+                bldh.CapNhatChitiet(this.cbbMaDH.Text, this.cbbMaSP.Text,  sl, gia, t, ref err);
                 LoadData();
                 MessageBox.Show("Đã sửa xong!");
             }
@@ -190,7 +192,7 @@ namespace QLy
             int r = dgvCT.CurrentCell.RowIndex;
 
             this.cbbMaDH.Text = dgvCT.Rows[r].Cells[0].Value.ToString();
-            this.txtMaKH.Text = dgvCT.Rows[r].Cells[2].Value.ToString();
+           // this.txtMaKH.Text = dgvCT.Rows[r].Cells[2].Value.ToString();
             this.cbbMaSP.Text = dgvCT.Rows[r].Cells[1].Value.ToString();
             
             this.txtSL.Text = dgvCT.Rows[r].Cells[3].Value.ToString();
@@ -237,19 +239,19 @@ namespace QLy
             cbbMaSP.ValueMember = BLSanPham.masp;
         }
 
-        private void cbbMaDH_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        //private void cbbMaDH_SelectedIndexChanged(object sender, EventArgs e)
+        //{
 
-            dtK = new DataTable();
-            dtK.Clear();
-            DataSet ds = blDH.ktra(cbbMaDH.Text); ;
-            dtK = ds.Tables[0];
-            foreach (DataRow a in dtK.Rows)
-            {
-                txtMaKH.Text = a[BLKhachHang.makh].ToString();
-            }
+        //    dtK = new DataTable();
+        //    dtK.Clear();
+        //    DataSet ds = blDH.ktra(cbbMaDH.Text); ;
+        //    dtK = ds.Tables[0];
+        //    foreach (DataRow a in dtK.Rows)
+        //    {
+        //        txtMaKH.Text = a[BLKhachHang.makh].ToString();
+        //    }
        
-        }
+        //}
 
         private void cbbMaSP_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -299,11 +301,11 @@ namespace QLy
 
             else
             {
-                if (rdoMakh.Checked == true)
-                {
-                    ds = blDH.TimkiemTheoMaKH(txtTimkiem.Text);
-                }
-                else
+                //if (rdoMakh.Checked == true)
+                //{
+                //    ds = blDH.TimkiemTheoMaKH(txtTimkiem.Text);
+                //}
+                //else
                     ds = blDH.TimkiemTheoMaSP(txtTimkiem.Text);
             }
 

@@ -35,13 +35,13 @@
             this.tabPageSP = new System.Windows.Forms.TabPage();
             this.tabPageKho = new System.Windows.Forms.TabPage();
             this.tabPageDonHang = new System.Windows.Forms.TabPage();
-            this.tabPageThongKe = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.tabPageThongKe = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -117,6 +117,7 @@
             this.tabPageSP.Tag = "3";
             this.tabPageSP.Text = "  Sản Phẩm  ";
             this.tabPageSP.UseVisualStyleBackColor = true;
+            this.tabPageSP.Click += new System.EventHandler(this.tabPageSP_Click);
             // 
             // tabPageKho
             // 
@@ -127,7 +128,7 @@
             this.tabPageKho.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageKho.Size = new System.Drawing.Size(833, 557);
             this.tabPageKho.TabIndex = 4;
-            this.tabPageKho.Text = "  Kho Bánh   ";
+            this.tabPageKho.Text = "  Loại Sản Phẩm   ";
             this.tabPageKho.UseVisualStyleBackColor = true;
             this.tabPageKho.Click += new System.EventHandler(this.tabPageKho_Click);
             // 
@@ -144,26 +145,14 @@
             this.tabPageDonHang.Text = "    Đơn Hàng   ";
             this.tabPageDonHang.UseVisualStyleBackColor = true;
             // 
-            // tabPageThongKe
-            // 
-            this.tabPageThongKe.BackColor = System.Drawing.Color.LemonChiffon;
-            this.tabPageThongKe.BackgroundImage = global::QLy.Properties.Resources.tiramisu;
-            this.tabPageThongKe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.tabPageThongKe.Location = new System.Drawing.Point(4, 25);
-            this.tabPageThongKe.Name = "tabPageThongKe";
-            this.tabPageThongKe.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageThongKe.Size = new System.Drawing.Size(833, 557);
-            this.tabPageThongKe.TabIndex = 6;
-            this.tabPageThongKe.Text = "   Thống Kê   ";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("VNI-Souvir", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label3.Location = new System.Drawing.Point(34, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 19);
+            this.label3.Size = new System.Drawing.Size(105, 16);
             this.label3.TabIndex = 17;
             this.label3.Text = "GIN\'S HOUSE";
             // 
@@ -221,6 +210,18 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // tabPageThongKe
+            // 
+            this.tabPageThongKe.BackColor = System.Drawing.Color.LemonChiffon;
+            this.tabPageThongKe.BackgroundImage = global::QLy.Properties.Resources.tiramisu;
+            this.tabPageThongKe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.tabPageThongKe.Location = new System.Drawing.Point(4, 25);
+            this.tabPageThongKe.Name = "tabPageThongKe";
+            this.tabPageThongKe.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageThongKe.Size = new System.Drawing.Size(833, 557);
+            this.tabPageThongKe.TabIndex = 6;
+            this.tabPageThongKe.Text = "   Thống Kê   ";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,8 +260,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TabPage tabPageThongKe;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TabPage tabPageThongKe;
     }
 }

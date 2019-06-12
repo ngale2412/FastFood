@@ -15,7 +15,7 @@ namespace QLy.BS_layer
 {
     class BLDonHang
     {
-        public static string madh = "MaHD";
+        //public static string madh = "MaHD";
 
         DBMain db = null;
         public BLDonHang()
@@ -23,47 +23,56 @@ namespace QLy.BS_layer
             db = new DBMain();
 
         }
-        public DataSet LayDonHang()
+        void SettableColumn(DataTable dt)
         {
-            return db.ExecuteQueryDataSet("select * from HOADON", CommandType.Text);
-        }
-        public bool ThemDonHang(string MaDH, string MaKH, string MaNV,  float tong, string NgLap, ref string err)
-        {
-            string sqlString = "Insert Into HOADON Values(" + "'" + MaDH + "',N'" + MaKH + "',N'" + MaNV + "',N'" + tong + "',N'" + NgLap + "')";
-
-            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
-
-        }
-        public bool XoaDonHang(ref string err, string MaDH)
-        {
-            string sqlString = "Delete From HOADON Where MaHD='" + MaDH + "'";
-            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
-        }
-        public bool CapNhatDonHang(string MaDH, string MaKH, string MaNV, float tong, string NgLap,  ref string err)
-        {
-            string sqlString = "Update HOADON Set MaKH=N'" + MaKH + "' ,MaNV=N'" + MaNV + "',TongTien=N'" + tong + "' ,NgayLap=N'" + NgLap + "'  Where MaHD='" + MaDH + "'";
-            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+            dt.Columns.Add("Mã hóa đơn");
+            dt.Columns.Add("Tên KH");
+            dt.Columns.Add("Tên NV");
+            dt.Columns.Add("Ngày lập HD");
+            dt.Columns.Add("Ngày nhận hàng");
         }
 
+        //public DataSet LayDonHang()
+        //{
+        //    return db.ExecuteQueryDataSet("select * from HOADON", CommandType.Text);
+        //}
+        //public bool ThemDonHang(string MaDH, string MaKH, string MaNV,  float tong, string NgLap, ref string err)
+        //{
+        //    string sqlString = "Insert Into HOADON Values(" + "'" + MaDH + "',N'" + MaKH + "',N'" + MaNV + "',N'" + tong + "',N'" + NgLap + "')";
 
-        //tìm kiếm
-        public DataSet TimkiemTheoMaDH(string tk)
-        {
-            string sql = "select *from HOADON where MaHD like N'%" + tk + "%'";
-            return db.ExecuteQueryDataSet(sql, CommandType.Text);
-        }
+        //    return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
 
-        public DataSet TimkiemTheoMaKH(string tk)
-        {
-            string sql = "select *from HOADON where MaKH like N'%" + tk + "%'";
-            return db.ExecuteQueryDataSet(sql, CommandType.Text);
-        }
+        //}
+        //public bool XoaDonHang(ref string err, string MaDH)
+        //{
+        //    string sqlString = "Delete From HOADON Where MaHD='" + MaDH + "'";
+        //    return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+        //}
+        //public bool CapNhatDonHang(string MaDH, string MaKH, string MaNV, float tong, string NgLap,  ref string err)
+        //{
+        //    string sqlString = "Update HOADON Set MaKH=N'" + MaKH + "' ,MaNV=N'" + MaNV + "',TongTien=N'" + tong + "' ,NgayLap=N'" + NgLap + "'  Where MaHD='" + MaDH + "'";
+        //    return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+        //}
 
-        public DataSet TimkiemTheoMaNV(string tk)
-        {
-            string sql = "select *from HOADON where MaNV like N'%" + tk + "%'";
-            return db.ExecuteQueryDataSet(sql, CommandType.Text);
-        }
+
+        ////tìm kiếm
+        //public DataSet TimkiemTheoMaDH(string tk)
+        //{
+        //    string sql = "select *from HOADON where MaHD like N'%" + tk + "%'";
+        //    return db.ExecuteQueryDataSet(sql, CommandType.Text);
+        //}
+
+        //public DataSet TimkiemTheoMaKH(string tk)
+        //{
+        //    string sql = "select *from HOADON where MaKH like N'%" + tk + "%'";
+        //    return db.ExecuteQueryDataSet(sql, CommandType.Text);
+        //}
+
+        //public DataSet TimkiemTheoMaNV(string tk)
+        //{
+        //    string sql = "select *from HOADON where MaNV like N'%" + tk + "%'";
+        //    return db.ExecuteQueryDataSet(sql, CommandType.Text);
+        //}
 
         //ktra
         

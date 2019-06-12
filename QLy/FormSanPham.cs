@@ -197,7 +197,7 @@ namespace QLy
            dgvSP.Rows[r].Cells[3].Value.ToString();
             this.txtLoaiSP.Text =
            dgvSP.Rows[r].Cells[5].Value.ToString();
-        }
+        } 
 
         private void label7_Click(object sender, EventArgs e)
         {

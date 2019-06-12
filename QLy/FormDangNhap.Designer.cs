@@ -50,7 +50,7 @@
             // btnDangNhap
             // 
             this.btnDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnDangNhap.Font = new System.Drawing.Font("Segoe WP", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.ForeColor = System.Drawing.Color.DarkCyan;
             this.btnDangNhap.Location = new System.Drawing.Point(12, 156);
             this.btnDangNhap.Name = "btnDangNhap";
@@ -93,7 +93,7 @@
             // btnThoat
             // 
             this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnThoat.Font = new System.Drawing.Font("Segoe WP", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.SaddleBrown;
             this.btnThoat.Location = new System.Drawing.Point(178, 156);
             this.btnThoat.Name = "btnThoat";
@@ -119,11 +119,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("VNI-Souvir", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label3.Location = new System.Drawing.Point(32, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 19);
+            this.label3.Size = new System.Drawing.Size(105, 16);
             this.label3.TabIndex = 15;
             this.label3.Text = "GIN\'S HOUSE";
             // 
@@ -206,7 +206,7 @@
             this.panel1.Controls.Add(this.btnThoat);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnDangNhap);
-            this.panel1.Location = new System.Drawing.Point(152, 448);
+            this.panel1.Location = new System.Drawing.Point(152, 100);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(302, 198);
             this.panel1.TabIndex = 21;
@@ -216,7 +216,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImage = global::QLy.Properties.Resources.gintama___kanketsu_hen___yorozuya_yo___folder_icon_by_minacsky_saya_d8jsm37;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(593, 654);
             this.Controls.Add(this.panel1);
